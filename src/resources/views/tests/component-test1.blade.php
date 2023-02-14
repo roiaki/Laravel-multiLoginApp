@@ -4,5 +4,6 @@
   </x-slot>
   コンポーネントテスト１
 
-  <x-tests.card title="タイトル123" content="ここですよ123" :message="$test_message" />
+  <x-tests.card title="タイトル1" content="ここですよ123" :message="$test_message" />
+  <x-tests.card title="タイトル2"/>
 </x-tests.app>
