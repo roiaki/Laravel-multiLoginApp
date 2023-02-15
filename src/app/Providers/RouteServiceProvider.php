@@ -17,7 +17,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/dashboard';
+    public const HOME       = '/dashboard';
     public const OWNER_HOME = '/owner/dashboard';
     public const ADMIN_HOME = '/admin/dashboard';
 
@@ -47,14 +47,14 @@ class RouteServiceProvider extends ServiceProvider
             
             // routes/owner.php の全てのURLの頭にprefix('owner')が付く
             Route::prefix('owner')
-                ->as('owner')
+                ->as('owner.')
                 ->middleware('web')
                 ->namespace($this->namespace)
                 ->group(base_path('routes/owner.php'));
             
             // routes/admin.php の全てのURLの頭にprefix('admin')が付く
             Route::prefix('admin')
-                ->as('admin')
+                ->as('admin.')
                 ->middleware('web')
                 ->namespace($this->namespace)
                 ->group(base_path('routes/admin.php'));

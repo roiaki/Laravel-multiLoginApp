@@ -24,9 +24,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('owner.welcome');
-// });
+Route::get('/', function () {
+    return view('owner.welcome');
+});
 
 Route::prefix('shops')->
     middleware('auth:owners')->group(function(){
@@ -99,3 +99,4 @@ Route::post('/confirm-password', [ConfirmablePasswordController::class, 'store']
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->middleware('auth:owners')
                 ->name('logout');
+
