@@ -1,4 +1,5 @@
 <x-guest-layout>
+    
     <x-auth-card>
         オーナー用
         <x-slot name="logo">
