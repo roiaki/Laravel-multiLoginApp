@@ -31,6 +31,13 @@ class RedirectIfAuthenticated
         //     }
         // }
 
+
+        /*
+        * オーナ―がログインしている状態で
+        *
+        */
+
+        //　該当のユーザーがログインしていて、かつルートがそれに該当する場合
         if(Auth::guard(self::GUARD_USER)->check() && $request->routeIs('user.*')) {
             return redirect(RouteServiceProvider::HOME);
         }
